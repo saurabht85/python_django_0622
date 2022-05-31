@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock title %}
+
+{% block content %}
+Student Details
+
+<h1> Name: {{student.firstname}} {{student.lastname}}</h1>
+<p> <strong>Email ID: {{student.email}}</strong></p>
+{% endblock content %}

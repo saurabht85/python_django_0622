@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock title %}
+
+{% block content %}
+<h1>{{ title }}</h1>
+
+{% if submitted %}
+<p class="success">Your message was submitted successfully.
+Our team will get back to you soon.
+</p>
+{% else %}
+<form action="" method="post" novalidate>
+    <table>
+        {{ form.as_table }}
+    </table>
+    <tr>
+        <td>&nbsp;</td>
+        <td><input type="submit" value="Submit"></td>
+    </tr>
+        {% csrf_token %}
+</form>
+{% endif %}
+{% endblock content %}
